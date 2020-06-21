@@ -6,6 +6,7 @@ import { LocalizationContext } from '../services/localization/LocalizationContex
 import Listagem from './../pages/Listagem';
 import Detalhes from './../pages/Detalhes';
 import Inserir from './../pages/Inserir';
+import Eliminar from './../pages/Eliminar';
 const Stack = createStackNavigator();
 
 function StackLista({ navigation }) {
@@ -69,6 +70,20 @@ function StackLista({ navigation }) {
           headerTitleStyle: {
             fontWeight: 'bold',
           },
+        })}
+      />
+        <Stack.Screen name="Eliminar" component={Eliminar}
+        options={({ navigation }) => ({
+          title: translations.EliminarN,
+          headerStyle: {
+            backgroundColor: '#ffbf00',
+          },
+          headerTintColor: '#fff',
+          headerTitleAlign: 'center',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+
         })}
       />
        </Stack.Navigator>
