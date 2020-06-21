@@ -7,6 +7,7 @@ import Listagem from './../pages/Listagem';
 import Detalhes from './../pages/Detalhes';
 import Inserir from './../pages/Inserir';
 import Eliminar from './../pages/Eliminar';
+import Atualizar from './../pages/Atualizar';
 const Stack = createStackNavigator();
 
 function StackLista({ navigation }) {
@@ -75,6 +76,20 @@ function StackLista({ navigation }) {
         <Stack.Screen name="Eliminar" component={Eliminar}
         options={({ navigation }) => ({
           title: translations.EliminarN,
+          headerStyle: {
+            backgroundColor: '#ffbf00',
+          },
+          headerTintColor: '#fff',
+          headerTitleAlign: 'center',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+
+        })}
+      />
+          <Stack.Screen name="Atualizar" component={Atualizar}
+        options={({ navigation }) => ({
+          title: translations.AtualizarN,
           headerStyle: {
             backgroundColor: '#ffbf00',
           },
