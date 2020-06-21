@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { LocalizationContext } from '../services/localization/LocalizationContext';
 import Listagem from './../pages/Listagem';
 import Detalhes from './../pages/Detalhes';
+import Inserir from './../pages/Inserir';
 const Stack = createStackNavigator();
 
 function StackLista({ navigation }) {
@@ -55,6 +56,19 @@ function StackLista({ navigation }) {
             fontWeight: 'bold',
           },
 
+        })}
+      />
+       <Stack.Screen name="Inserir" component={Inserir}
+        options={({ navigation }) => ({
+          title: translations.InserirNota,
+          headerStyle: {
+            backgroundColor: '#ffbf00',
+          },
+          headerTintColor: '#fff',
+          headerTitleAlign: 'center',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
         })}
       />
        </Stack.Navigator>
