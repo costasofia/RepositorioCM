@@ -4,7 +4,7 @@ import { NavigationContainer, StackActions } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { LocalizationContext } from '../services/localization/LocalizationContext';
 import Listagem from './../pages/Listagem';
-
+import Detalhes from './../pages/Detalhes';
 const Stack = createStackNavigator();
 
 function StackLista({ navigation }) {
@@ -41,6 +41,20 @@ function StackLista({ navigation }) {
               <Image style={{ width: 30, height: 30, marginLeft: 20 }} source={require('../imagens/exit.png')} />
             </TouchableOpacity>
           ),
+        })}
+      />
+      <Stack.Screen name="Detalhes" component={Detalhes}
+        options={({ navigation }) => ({
+          title: translations.DetalhesN,
+          headerStyle: {
+            backgroundColor: '#ffbf00',
+          },
+          headerTintColor: '#fff',
+          headerTitleAlign: 'center',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+
         })}
       />
        </Stack.Navigator>
