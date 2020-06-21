@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Mapa from './../pages/Mapa';
 import Login from './../pages/Login';
 import StackLista from './StackLista';
+import ListagemP from './../pages/ListagemP';
 const Stack = createStackNavigator();
 
 function StackLogin({ navigation }) {
@@ -16,8 +17,10 @@ function StackLogin({ navigation }) {
                     options={{ headerShown: false, }} />
                 <Stack.Screen name="StackLista" component={StackLista}
                     options={{ title: 'App', headerShown: false, }} />
-                     <Stack.Screen name="Mapa" component={Mapa}
+                <Stack.Screen name="Mapa" component={Mapa}
                     options={{ headerShown: false, }} />
+                <Stack.Screen name="ListagemP" component={ListagemP}
+                    options={{ title: 'Lista de Pontos' }} />
             </Stack.Navigator>
         </NavigationContainer>
     )
