@@ -9,6 +9,7 @@ import StackLista from './StackLista';
 import ListagemP from './../pages/ListagemP';
 import InserirP from './../pages/InserirP';
 import DetalhesP from './../pages/DetalhesP';
+import AtualizarP from './../pages/AtualizarP';
 const Stack = createStackNavigator();
 
 function StackLogin({ navigation }) {
@@ -27,6 +28,8 @@ function StackLogin({ navigation }) {
                     options={{ headerShown: false, }} />
                 <Stack.Screen name="DetalhesP" component={DetalhesP}
                     options={{ title: 'Detalhes' }} />
+                <Stack.Screen name="AtualizarP" component={AtualizarP}
+                    options={{ title: 'Atualizar Nota' }} />
             </Stack.Navigator>
         </NavigationContainer>
     )
